@@ -1,0 +1,22 @@
+# Introdução
+
+Em algumas disciplinas do curso de Ciência da Computação da Universidade Federal de Campina Grande (UFCG), os alunos são estimulados muitas vezes ao desenvolvimento de várias atividades em grupo. Essas atividades de alguma forma preparam os alunos para o meio profissional da área de computação, visto que a atividade de desenvolvimento de software, geralmente, é realizada por um grupo de pessoas. 
+
+Nessas atividades em grupos, a geração de algum tipo de conflito é comum, devido a grande diversidade de pessoas com diferentes personalidades trabalhando juntas. Em razão disso, esse survey tem como objetivo estudar os tipos de conflitos e as formas de gerenciamento mais comuns encontradas por alunos do curso de Ciência da Computação.
+
+As **questões de pesquisa** são:
+
+* Quais os tipos de conflito mais recorrentes nos times de desenvolvimento?
+* Qual fonte de conflitos teve maior impacto negativo no desenvolvimento do projeto?
+* Quais as principais soluções aplicadas pelo time para o gerenciamento de conflitos?
+* Quais das soluções de gestão tiveram maior impacto positivo no desenvolvimento do projeto?
+
+
+Enquanto que as **hipóteses** a serem testadas a partir do survey são:
+
+* Conflitos decorrentes de desacordo sobre as tarefas são os mais frequentes.
+* Conflitos decorrentes de relacionamentos entre os membros da equipe são os que têm maior impacto negativo no projeto.
+* Modos de gerenciamento que seguem abordagens colaborativas são mais empregado nos projetos. 
+* Modos de gerenciamento que ignoram ou propõem soluções autoritárias para os conflitos são menos efetivos em sua resolução.
+
+Essas hipóteses baseiam-se nos tipos de conflitos e formas de gerenciamento de conflitos encontrados na literatura, como também na experiência pessoal dos membros desse estudo.

@@ -1,0 +1,11 @@
+name: Publish Document
+title:
+username:
+account: rpubs
+server: rpubs.com
+hostUrl: rpubs.com
+appId: https://api.rpubs.com/api/v1/document/800941/cedf54f6bb13448aa583505e525a7bf0
+bundleId: https://api.rpubs.com/api/v1/document/800941/cedf54f6bb13448aa583505e525a7bf0
+url: http://rpubs.com/issilva5/800941
+when: 1629553959.64291
+lastSyncTime: 1629553959.64294

@@ -1,0 +1,20 @@
+# Conclusões
+Teste a hipótese (não são necessários testes de hipóteses formais). Qual o resultado?
+
+Extraindo as informações da seção anterior, foi possível verificarmos as nossas hipóteses com relação aos dados. A seguir, discutiremos individualmente cada uma destas.
+
+## H1: Conflitos decorrentes de desacordo sobre as tarefas são os mais frequentes.
+
+O *Gráfico II* evidencia que conflitos por prazo são os mais frequentes, sua média é superior, por aproximadamente 1 ponto, a média de prioridades (tipo de conflito que inclui o desacordo sobre tarefas). Outrossim, não há a ocorrência de sobreposição dos conflito. Portanto, ocorre a **refutação** da hipótese H1.
+
+## H2: Conflitos decorrentes de relacionamentos entre os membros da equipe são os que têm maior impacto negativo no projeto.
+
+Os dados nos levaram a **refutar** a hipótese H2, uma vez que, como nos mostra o gráfico *Gráfico III* conflitos por personalidade tem uma alta incidência no menor valor, entretanto possui uma incidência moderada no maior valor. De modo que, a média desta é baixa e sua variância é alta, o que é comprovado pelo *Gráfico IV*.  Além disso, é possivel constatar o gerenciamento como fator de maior impacto.
+
+## H3: Modos de gerenciamento que seguem abordagens colaborativas são mais empregado nos projetos.
+
+São consideradas abordagens colaborativas: apaziguamento, confronto e negociação. Através da análise dos *Gráfico V* e  *Gráfico VI*, as soluções citadas diferenciam-se das demais, uma vez que, não há interseção entre seus intervalos de confiança. Assim, **corroborando** a hipótese H3.
+
+## H4: Modos de gerenciamento que ignoram ou propõem soluções autoritárias para os conflitos são menos efetivos em sua resolução.
+
+Pelo *Gráfico VIII* é possível notar que evasão e imposição apresentam-se como as soluções de gerenciamento com menor efetividade, ambas tendo médias próximas e com intervalos similares. Dessa forma, a hipótese H4 pode ser confirmada.

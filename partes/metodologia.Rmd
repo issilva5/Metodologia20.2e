@@ -1,0 +1,24 @@
+#  Metodologia
+
+O formulário pode ser visto [aqui](https://drive.google.com/file/d/1E7_pJTz4gbT9HHoycOqkJW_MRtUV4SoQ/view?usp=sharing), ele foi composto de quatro seções que estão descritas abaixo.
+
+## Seção 01: Apresentação
+Nessa seção descrevemos o nosso tema, apresentamos o grupo, o professor e o tempo estimado para a conclusão do questionário. Junto a essas informações também está apresentado nosso objetivo e método:
+
+- Objetivo: Identificar os fatores/fontes mais recorrentes que levam a conflitos em times de desenvolvimento no contexto dos projetos de disciplinas, bem como as estratégias de gerenciamento mais utilizadas para solucioná-los.
+- Método: Por meio de um levantamento bibliográfico, foram identificados as fontes e técnicas de gerenciamento de conflito mais comuns que foram utilizados na produção deste questionário em três seções: a primeira seção apresenta questões de caracterização que buscam coletar dados educacionais; a segunda apresenta questões referentes as fontes de conflitos; enquanto a terceira apresenta questões sobre as técnicas de gerenciamento de conflitos.
+	
+## Seção 02: Informações gerais
+Aqui são coletadas as informações sobre o aluno que está respondendo o questionário. Solicitamos as seguintes informações:
+
+ * Período de ingresso na Universidade
+ * Disciplinas que o aluno está cursando ou já cursou que envolvem projeto em grupo.
+ * Se cursou alguma dessas disciplinas durante o regime presencial.
+ * Se cursou alguma dessas disciplinas durante o regime remoto.
+ * Maior tamanho de grupo que já participou em uma disciplina.
+   
+## Seção 03: Fatores/Fontes de Conflitos
+Nesta seção apresentamos cinco fatores/fontes de conflitos em times de desenvolvimento de software, destacados na seção de revisão de literatura, e pedimos para ao respondente que informasse a frequência com que cada um deles ocorreu nos grupos em que participou e ao final que ordenasse-os pelo seu nível de impacto no sucesso do projeto.
+
+## Seção 04: Métodos de Gerenciamento de Conflitos
+Por fim, na quarta seção foram apresentados os cinco métodos de gerenciamento de conflitos, também destacados na revisão da literatura, e foi pedido que fosse informada a frequência com que cada um deles foi aplicado pelos grupos em que o aluno participou e ao final que ordenasse-os pelo seu nível de efetividade na resolução de conflitos.

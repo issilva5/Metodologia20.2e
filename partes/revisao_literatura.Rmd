@@ -1,0 +1,19 @@
+# Revisão da literatura
+
+Na litetura, existem diversos estudos tratando a respeito dos tipos e fontes de conflitos encontrados em projetos, bem como das técnicas de gerenciamento empregadas.
+
+Em @verma1998conflict são relatadas as sete maiores fontes de conflitos identificadas em projetos, que são baseadas em uma pesquisa realizada em uma empresa privada por @thamhain1975conflict. Entretanto, considerando o contexto dos projetos universitários algumas adaptações precisaram ser feitas. Sendo assim, os tipos de conflito, considerados nesta pesquisa, foram:
+
+* Conflitos sobre **prioridades do projeto**, ou seja, sobre quais atividades e tarefas devem ser executadas e em que sequência.
+* Conflitos sobre **gerenciamento**, ou seja, sobre a definição da hierarquia, das responsabilidades, do plano de execução, do procedimento de comunicação de atividades, etc.
+* Conflitos sobre **questões técnicas**, ou seja, sobre quais tecnologias, algoritmos e otimizações utilizar.
+* Conflito sobre **prazos**, ou seja, sobre a duração e data de entrega de tarefas do projeto.
+* Conflitos sobre **personalidades**, ou seja, centrados nas diferenças interpessoais do grupo.
+
+O gerenciamento de conflitos é muito importante para o sucesso do projeto, em @verma1998conflict encontramos cinco métodos de gerenciamento de conflitos, que foram utilizados nesta pesquisa:
+
+* **Confronto (Confrontation)**: reconhecendo que a discordância existe e considerando os requisitos, debater para escolher a solução que mais está de acordo.
+* **Negociação (Give and Take)**: reconhecendo que a discordância existe, produzir uma solução combinando partes das propostas dos membros envolvidos.
+* **Evasão (Withdrawal)**: ignorar o problema ou reconhecer que ele existe, mas considerar que não vale o esforço da resolução.
+* **Apaziguamento (Smoothing)**: reconhecendo que a discordância existe, escolher a solução daqueles mais envolvidos com a tarefa.
+* **Imposição (Forcing)**: reconhecendo que a discordância existe, um membro de maior hierarquia (ex. gerente) impõe a solução.
