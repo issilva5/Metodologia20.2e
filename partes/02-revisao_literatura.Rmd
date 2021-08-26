@@ -1,4 +1,4 @@
-# Revisão da literatura
+# Trabalhos relacionados
 
 Na litetura, existem diversos estudos tratando a respeito dos tipos e fontes de conflitos encontrados em projetos, bem como das técnicas de gerenciamento empregadas.
 

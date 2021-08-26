@@ -1,0 +1,38 @@
+---
+title: "Conflitos em times de desenvolvimento de software no contexto dos projetos das disciplinas"
+bibliography: 'metadata/references.bib'
+csl: 'metadata/associacao-brasileira-de-normas-tecnicas.csl'
+fontsize: 11pt
+author:
+- "João Marcelo Fernandes da Silva Júnior^[joao.marcelo.junior@ccc.ufcg.edu.br]"
+- "Gabriela Roberta Alverga do Nascimento"
+- "Ítallo de Sousa Silva"
+- "Thiago Nascimento de Lima"
+classoption:
+- twocolumn
+output: 
+  pdf_document:
+    df_print: kable
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+options(scipen = 10, digits = 4, OutDec = ",")
+```
+
+```{r child = 'partes/01-introducao.Rmd'}
+```
+
+```{r child = 'partes/02-revisao_literatura.Rmd'}
+```
+
+```{r child = 'partes/03-metodologia.Rmd'}
+```
+
+```{r child = 'partes/04-analise_exploratoria.Rmd'}
+```
+
+```{r child = 'partes/05-conclusao.Rmd'}
+```
+
+# Referências
