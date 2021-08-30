@@ -8,8 +8,8 @@ author:
 - "Gabriela Roberta Alverga do Nascimento"
 - "Ítallo de Sousa Silva"
 - "Thiago Nascimento de Lima"
-classoption:
-- twocolumn
+# classoption:
+# - twocolumn
 output: 
   pdf_document:
     df_print: kable
