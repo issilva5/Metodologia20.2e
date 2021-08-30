@@ -1,1 +1,18 @@
 # Conclusões e trabalhos futuros
+
+- O que foi atingido?
+  - Análise de 4 hipóteses
+    - Conflitos decorrentes de desacordo sobre as tarefas são os mais frequentes.
+    - Conflitos decorrentes de relacionamentos entre os membros da equipe são os que têm maior impacto negativo no projeto.
+    - Modos de gerenciamento que seguem abordagens colaborativas são mais empregado nos projetos.
+    - Modos de gerenciamento que ignoram ou propõem soluções autoritárias para os conflitos são menos efetivos em sua resolução.
+  
+- Quais os impactos?
+  - Saber conflitos mais frequentes possibilita minimizar sua ocorrência.
+  - Saber conflitos mais impactantes possibilita minimizar seu impacto negativo.
+  - Saber quais técnicas tem mais impacto positivo possibilita melhor gestão de conflitos.
+
+- Trabalhos futuros
+  - Caracterização ampla de possiveis conflitos.
+  - Caracterização consequência no projeto.
+  - Expandir a amostra na tentativa de diminuir erros.
