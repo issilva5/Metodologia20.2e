@@ -1,2 +1,18 @@
 # Introdução
 
+- Qual a motivação?
+    - Conflitos encontrados por membros da equipe.
+    - Relatos diversos sobre conflitos de estudantes do curso de Computação.
+    - Relatos sobre soluções de conflitos de estudantes.
+    - Dificuldades de desenvolvimento de projetos em uma grande equipe.
+- Qual o ambiente de estudo?
+    - Alunos de Disciplinas do curso de computação.
+    - Projetos em grupos das Disciplinas
+- Quais estudos publicados sobre o assunto?
+    - Estudos sobre conflitos e solução de conflitos
+- Qual o objetivo da pesquisa e o que prentede-se responder:
+    - Quais os tipos e fontes de conflitos mais recorrentes no ambiente do estudo.
+    - Quais as principais soluções para solução de conflitos.
+    - Quais soluções têm maior impacto na solução.
+- Qual a principal conclusão ou contribuição do estudo?
+    - Ajuda no entendimento e a evitar possíveis conflitos futuros enfretados por novos membros de equipe.
