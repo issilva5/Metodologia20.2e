@@ -1,2 +1,28 @@
 # Resultados e discussão
 
+- Qual o perfil dos respondentes do questionário?
+  - Tempo no curso avaliado pelo período de ingresso
+    - Temos mais alunos da primeira metade ou da segunda?
+    - Qual a proporção de respondentes comparada ao total de alunos do curso?
+  - Disciplinas de projeto que já foram cursadas
+  - Tamanho do maior grupo que o aluno fez parte
+  - Projetos e os regimes presencial e remoto
+  
+  - Recap do perfil, ex.: assim, nosso perfil é mais caracterizado por alunos da segunda metade, que já cursaram ..., participaram em grupos de tamanho médio em torno de ..., e participaram de projeto nos regimes ...
+
+- QP1: Quais os tipos de conflito mais recorrentes nos times de desenvolvimento?
+  - Avaliar a frequência de ocorrência atribuída pelo respondente a cada conflito, usando gráficos de barra.
+  - Avaliar a média dessas frequências, usando gráficos de intervalo de confiança.
+
+- QP2: Qual fonte de conflitos teve maior impacto negativo no desenvolvimento do projeto?
+  - Frequência a partir de gráfico de barra.
+  - Média das frequências do impacto
+
+- QP3: Quais as principais soluções aplicadas pelo time para o gerenciamento de conflitos?
+  - Novamente, frequência e média.
+
+- QP4: Quais das soluções de gestão tiveram maior impacto positivo no desenvolvimento do projeto?
+  - Mais uma vez apresentar frequência e média.
+
+- Possibilidades:
+  - Relacionar as percepções acima com tamanho do grupo e com regimes em que participou de projeto
