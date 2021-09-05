@@ -1,14 +1,183 @@
 # Resultados e discussão
 
-- Qual o perfil dos respondentes do questionário?
-  - Tempo no curso avaliado pelo período de ingresso
-    - Temos mais alunos da primeira metade ou da segunda?
-    - Qual a proporção de respondentes comparada ao total de alunos do curso?
-  - Disciplinas de projeto que já foram cursadas
-  - Tamanho do maior grupo que o aluno fez parte
-  - Projetos e os regimes presencial e remoto
-  
-  - Recap do perfil, ex.: assim, nosso perfil é mais caracterizado por alunos da segunda metade, que já cursaram ..., participaram em grupos de tamanho médio em torno de ..., e participaram de projeto nos regimes ...
+Nesta seção, dividida em três partes, os resultados, obtidos da aplicação do formulário, são apresentados. A primeira parte traz a descrição do perfil dos alunos respondentes, a segunda trata das percepções sobre as fontes de conflitos nos times, e por fim, a última aborda a temática das técnicas de resolução de conflitos. Além disso, as perguntas e hipóteses de pesquisa são retomadas e discutidas.
+
+```{r include=FALSE}
+library(tidyverse)
+theme_set(theme_bw())
+```
+
+```{r warning=FALSE}
+respostas_raw <- read_csv("../data/respostas_raw.csv", col_names = c(
+  'data_hora', 'periodo', 'disciplinas_cursadas', 'projeto_presencial',
+  'projeto_remoto', 'n_max_membros', 'conflito_prioridades', 'conflito_gerenciamento',
+  'conflito_tecnico', 'conflito_prazos', 'conflito_personalidades', 'conflito_1', 'conflito_2',
+  'conflito_3', 'conflito_4', 'conflito_5', 'solucao_confronto', 'solucao_negociacao',
+  'solucao_evasao', 'solucao_apazig', 'solucao_imposicao', 'solucao_1', 'solucao_2', 'solucao_3',
+  'solucao_4', 'solucao_5'
+), col_types = 'cccffiiiiiiccccciiiiiccccc', skip = 1)
+```
+
+```{r}
+respostas_clean <-
+  respostas_raw %>%
+  filter(if_all(.fns = function(x) !is.na(x))) %>%
+  mutate(
+    periodo = ifelse(periodo == "Anterior ou igual a 2015.2", "Anterior ou igual ao 2015.2", periodo),
+    periodo = factor(
+      periodo,
+      levels = c(
+        "Anterior ou igual ao 2015.2",
+        "2016.1",
+        "2016.2",
+        "2017.1",
+        "2017.2",
+        "2018.1",
+        "2018.2",
+        "2019.1",
+        "2019.2",
+        "2020.1",
+        "2020.2"
+      ),
+      ordered = T
+    ),
+    impacto_prioridades = case_when(
+      conflito_1 == "Prioridades" ~ 5,
+      conflito_2 == "Prioridades" ~ 4,
+      conflito_3 == "Prioridades" ~ 3,
+      conflito_4 == "Prioridades" ~ 2,
+      conflito_5 == "Prioridades" ~ 1
+    ),
+    impacto_gerenciamento = case_when(
+      conflito_1 == "Gerenciamento" ~ 5,
+      conflito_2 == "Gerenciamento" ~ 4,
+      conflito_3 == "Gerenciamento" ~ 3,
+      conflito_4 == "Gerenciamento" ~ 2,
+      conflito_5 == "Gerenciamento" ~ 1
+    ),
+    impacto_tecnico = case_when(
+      conflito_1 == "Questões técnicas" ~ 5,
+      conflito_2 == "Questões técnicas" ~ 4,
+      conflito_3 == "Questões técnicas" ~ 3,
+      conflito_4 == "Questões técnicas" ~ 2,
+      conflito_5 == "Questões técnicas" ~ 1
+    ),
+    impacto_prazos = case_when(
+      conflito_1 == "Prazos" ~ 5,
+      conflito_2 == "Prazos" ~ 4,
+      conflito_3 == "Prazos" ~ 3,
+      conflito_4 == "Prazos" ~ 2,
+      conflito_5 == "Prazos" ~ 1
+    ),
+    impacto_personalidade = case_when(
+      conflito_1 == "Personalidade" ~ 5,
+      conflito_2 == "Personalidade" ~ 4,
+      conflito_3 == "Personalidade" ~ 3,
+      conflito_4 == "Personalidade" ~ 2,
+      conflito_5 == "Personalidade" ~ 1
+    ),
+    efetividade_confronto = case_when(
+      solucao_1 == "Confronto" ~ 5,
+      solucao_2 == "Confronto" ~ 4,
+      solucao_3 == "Confronto" ~ 3,
+      solucao_4 == "Confronto" ~ 2,
+      solucao_5 == "Confronto" ~ 1
+    ),
+    efetividade_negociacao = case_when(
+      solucao_1 == "Negociação" ~ 5,
+      solucao_2 == "Negociação" ~ 4,
+      solucao_3 == "Negociação" ~ 3,
+      solucao_4 == "Negociação" ~ 2,
+      solucao_5 == "Negociação" ~ 1
+    ),
+    efetividade_evasao = case_when(
+      solucao_1 == "Evasão" ~ 5,
+      solucao_2 == "Evasão" ~ 4,
+      solucao_3 == "Evasão" ~ 3,
+      solucao_4 == "Evasão" ~ 2,
+      solucao_5 == "Evasão" ~ 1
+    ),
+    efetividade_apazig = case_when(
+      solucao_1 == "Apaziguamento" ~ 5,
+      solucao_2 == "Apaziguamento" ~ 4,
+      solucao_3 == "Apaziguamento" ~ 3,
+      solucao_4 == "Apaziguamento" ~ 2,
+      solucao_5 == "Apaziguamento" ~ 1
+    ),
+    efetividade_imposicao = case_when(
+      solucao_1 == "Imposição" ~ 5,
+      solucao_2 == "Imposição" ~ 4,
+      solucao_3 == "Imposição" ~ 3,
+      solucao_4 == "Imposição" ~ 2,
+      solucao_5 == "Imposição" ~ 1
+    ),
+    apenas_presencial = projeto_presencial == "Sim" & projeto_remoto == "Não",
+    apenas_remoto = projeto_presencial == "Não" & projeto_remoto == "Sim",
+    ambos = projeto_presencial == "Sim" & projeto_remoto == "Sim",
+    nenhum = projeto_presencial == "Não" & projeto_remoto == "Não"
+  ) %>%
+  filter(!(projeto_remoto == "Não" & projeto_presencial == "Não")) %>%
+  select(-matches("_[1-5]"), -data_hora)
+```
+
+## Perfil dos alunos respondentes
+
+O Bacharelado em Ciência da Computação da Universidade Federal de Campina Grande (UFCG) tem duração estimada de nove semestres e oferta anualmente cerca de 180 novas vagas. No momento da aplicação desta pesquisa, o curso contava com um total de 876 alunos matriculados. Esta pesquisa reuniu 81 respostas, destas 78 foram válidas, correspondendo a aproximadamente 9% dos alunos do curso. O descarte das respostas decorreu devido o respondente não ter participado de nenhum projeto em grupo. O perfil dos alunos foi avaliado considerando três aspectos: período de ingresso no curso, disciplinas cursadas e participação em projetos de disciplinas.
+
+A Tabela \@ref(tab:periodos) apresenta a distribuição dos respondentes pelo período de ingresso no curso. Houve uma predominânica de respostas de alunos que estão na segunda metade do curso (ou seja, cursaram mais de cinco períodos até o momento da pesquisa), com destaque para o período 2018.1 que concentra mais de 25% das respostas.
+
+```{r periodos}
+respostas_clean %>%
+  count(periodo) %>%
+  knitr::kable(col.names = c('Período', 'Nº de alunos'), 
+               caption = 'Distribuição dos alunos respondentes por período', 
+               booktabs = TRUE)
+```
+
+```{r}
+n_dis <- respostas_clean %>%
+  mutate(n_dis = str_count(disciplinas_cursadas, pattern = ", ") + 1) %>%
+  select(n_dis) %>%
+  pull()
+```
+
+```{r include=FALSE}
+respostas_clean %>%
+  select(apenas_presencial, apenas_remoto, ambos, nenhum) %>%
+  pivot_longer(cols = everything(), names_to = "Tipo", values_to = "Value") %>%
+  filter(Value == T) %>%
+  count(Tipo) %>%
+  mutate(Tipo = case_when(
+    Tipo == "ambos" ~ "Em ambos",
+    Tipo == "apenas_presencial" ~ "Apenas no presencial",
+    Tipo == "apenas_remoto" ~ "Apenas no remoto",
+    Tipo == "nenhum" ~ "Nenhum"
+  ),
+  p = n/nrow(respostas_clean) * 100)
+```
+
+Em relação a participação dos alunos em projetos, 87,18% participaram tanto no regime presencial quanto no regime remoto (implantado pela UFCG durante a pandemia de Covid-19), enquanto que 6,41% participaram exclusivamente no regime presencial e 6,41% participaram apenas no modelo remoto.
+
+Para melhor compreender esta participação, foi pedido que o aluno selecionasse dentre as disciplinas da grade obrigatória do curso que incluem *projeto de software* em sua avaliação, aquelas que este já cursou ou estava cursando no momento da pesquisa. O currículo obrigatório do curso inclui seis disciplinas com a descrição acima, são elas: Laboratório de Programação II (LP2), Paradigmas de Linguagem de Programação (PLP), Projeto de Software (PSOFT), Engenharia de Software (ES), Projeto em Computação I (P1) e Projeto em Computação II (P2). Quatro disciplinas (LP2, PLP, PSOFT, ES) já foram cursadas por mais de 70% dos alunos, enquanto que duas disciplinas Projeto em Computação I e II (P1 e P2) foram cursadas por cerca de 30% destes. A mediana da quantidade de disciplinas cursadas por aluno é de `r median(n_dis)` disciplinas, havendo alunos que cursaram apenas uma disciplina, como também alunos que cursaram todas.
+
+```{r tam, fig.cap = "Distribuição do tamanho do maior grupo em que o aluno participou"}
+p <- respostas_clean %>%
+  count(n_max_membros) %>%
+  mutate(n = n/nrow(respostas_clean) * 100) %>%
+  ggplot(aes(x = as.factor(n_max_membros), y = n)) +
+  geom_bar(stat = "identity", position = "dodge", color = 'black', fill = '#3690c0') +
+  labs(x = "Quantidade de membros",
+       y = "Porcentagem de alunos (%)",
+       title = "")
+
+plot(p)
+
+nmembros <- respostas_clean %>% pull(n_max_membros)
+```
+
+Além disso, foi coletado o tamanho do maior grupo do qual o aluno fez parte até o momento. A distribuição desta variável pode ser vista na Figura \@ref(fig:tam). A resposta com maior frequência foi 5, com média e mediana de `r round(mean(nmembros),2)` e `r round(median(nmembros),2)` membros respectivamente.
+
+## Fontes e origens de conflito
 
 - QP1: Quais os tipos de conflito mais recorrentes nos times de desenvolvimento?
   - Avaliar a frequência de ocorrência atribuída pelo respondente a cada conflito, usando gráficos de barra.
@@ -18,11 +187,10 @@
   - Frequência a partir de gráfico de barra.
   - Média das frequências do impacto
 
+## Soluções de conflitos
+
 - QP3: Quais as principais soluções aplicadas pelo time para o gerenciamento de conflitos?
   - Novamente, frequência e média.
 
 - QP4: Quais das soluções de gestão tiveram maior impacto positivo no desenvolvimento do projeto?
   - Mais uma vez apresentar frequência e média.
-
-- Possibilidades:
-  - Relacionar as percepções acima com tamanho do grupo e com regimes em que participou de projeto
