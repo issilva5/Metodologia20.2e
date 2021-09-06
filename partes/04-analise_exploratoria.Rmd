@@ -179,18 +179,268 @@ Além disso, foi coletado o tamanho do maior grupo do qual o aluno fez parte at�
 
 ## Fontes e origens de conflito
 
-- QP1: Quais os tipos de conflito mais recorrentes nos times de desenvolvimento?
-  - Avaliar a frequência de ocorrência atribuída pelo respondente a cada conflito, usando gráficos de barra.
-  - Avaliar a média dessas frequências, usando gráficos de intervalo de confiança.
+```{r}
+size_d <- nrow(respostas_clean)
+```
 
-- QP2: Qual fonte de conflitos teve maior impacto negativo no desenvolvimento do projeto?
-  - Frequência a partir de gráfico de barra.
-  - Média das frequências do impacto
+Dois aspectos relativos as fontes de conflito foram avaliados nesta pesquisa: sua frequência (QP1) e seu impacto no decorrer do projeto (QP2). Para tanto, os respondentes foram expostos as cinco origens de conflito mais recorrentes de acordo com a literatura e pedidos para classificá-las pela frequência de ocorrência e impacto negativo nos grupos em que participou.
+
+```{r freq, fig.cap = "Frequência com que determinado fator originou conflitos no grupo"}
+p <- respostas_clean %>%
+  select(starts_with("conflito_")) %>%
+  pivot_longer(
+    cols = starts_with("conflito_"),
+    names_to = "tipo_de_conflito",
+    values_to = "freq"
+  ) %>%
+  mutate(
+    tipo_de_conflito = case_when(
+      tipo_de_conflito == "conflito_prioridades" ~ "Prioridades",
+      tipo_de_conflito == "conflito_gerenciamento" ~ "Gerenciamento",
+      tipo_de_conflito == "conflito_tecnico" ~ "Questões técnicas",
+      tipo_de_conflito == "conflito_prazos" ~ "Prazos",
+      tipo_de_conflito == "conflito_personalidades" ~ "Personalidades",
+    )
+  ) %>%
+  count(tipo_de_conflito, freq) %>%
+  mutate(n = n/size_d * 100) %>%
+  ggplot(aes(x = freq, y = n)) +
+  geom_bar(stat = 'identity', position = 'dodge', color = 'black', fill = '#fdd49e') +
+  facet_wrap( ~ tipo_de_conflito) +
+  labs(x = "Frequência atribuída pelo aluno",
+       y = "Porcentagem de respostas (%)",
+       caption = "Onde 1 equivale a 'Quase nunca' e 5 equivale a 'Frequentemente'",
+       title = "")
+
+plot(p)
+```
+
+```{r conf-freq-fator, fig.cap="Tipo de conflito pela média da frequêcia atribuída"}
+respostas_clean %>%
+  select(starts_with("conflito_")) %>%
+  summarise(across(.fns = c("mean" = mean, "var" = var), .names = "{.col}_{.fn}")) %>%
+  pivot_longer(
+    cols = starts_with("conflito_"),
+    names_to = "tipo_de_conflito",
+    values_to = "value"
+  ) %>% rowwise() %>%
+  mutate(
+    metric = str_split(tipo_de_conflito, "_")[[1]][3],
+    tipo_de_conflito = str_split(tipo_de_conflito, "_")[[1]][2],
+    tipo_de_conflito = case_when(
+      tipo_de_conflito == "prioridades" ~ "Prioridades",
+      tipo_de_conflito == "gerenciamento" ~ "Gerenciamento",
+      tipo_de_conflito == "tecnico" ~ "Questões técnicas",
+      tipo_de_conflito == "prazos" ~ "Prazos",
+      tipo_de_conflito == "personalidades" ~ "Personalidades",
+    )
+  ) %>% ungroup() %>%
+  pivot_wider(id_cols = tipo_de_conflito, values_from = "value", names_from = "metric") %>%
+  mutate(ic.low = mean + qt(0.025, df = size_d-1) * sqrt(var/size_d),
+         ic.high = mean + qt(0.975, df = size_d-1) * sqrt(var/size_d)) %>%
+  ggplot(aes(y = reorder(tipo_de_conflito, mean))) +
+  geom_linerange(aes(xmin = ic.low, xmax = ic.high)) +
+  geom_point(aes(x = mean), color = '#fc8d59', size = 2) +
+  scale_x_continuous(limits = c(2, 4)) +
+  labs(title = "",
+       y = "Tipo de conflito",
+       x = "Média da frequência",
+       caption = "Onde 1 equivale a 'Quase nunca' e 5 equivale a 'Frequentemente'")
+```
+
+Na Figura \@ref(fig:freq), está apresentada a distribuição das respostas obtidas a respeito da frequência com que determinado fator levou a conflitos no time. Considerando as modas das respostas, é possível ordenar os fatores, crescentemente, por sua frequência: Personalidades, Prioridades, Questões técnicas, Gerenciamento e Prazos. A Figura \@ref(fig:conf-freq-fator) apresenta os tipos de origens de conflito ordenados pela média das respostas, com um intervalo de confiança de 95%. O fator Prazos é, em média, o maior e também o único cujo intervalo de confiança não se sobrepõe aos demais. Essas observações **refutam a hipótese (H1)**, uma vez que *Prioridades* foi assumida como a causa mais frequente, mas foi observado que a razão mais frequente é, na verdade, *Prazos*.
+
+Na Figura \@ref(fig:fator-conflito-dist), é apresentada a distribuição das respostas sobre o impacto de cada fator de conflito no grupo. *Gerenciamento* mostra-se com altas porcentagens de respostas nos valores 4 e 5, indicando um forte impacto no projeto. Isto é confirmado pela Figura \@ref(fig:impacto-media-fator), pois sua média é de fato a maior. Entretanto, seu intervalo de confiança sobrepõe-se ao do fator *Prazos*, que tem uma frequência de resposta quase uniforme entre 2 e 5.
+
+```{r fator-conflito-dist, fig.cap="Impacto dos fatores de conflito no grupo"}
+respostas_clean %>%
+  select(starts_with("impacto_")) %>%
+  pivot_longer(
+    cols = starts_with("impacto_"),
+    names_to = "tipo_de_conflito",
+    values_to = "impacto"
+  ) %>%
+  mutate(
+    tipo_de_conflito = case_when(
+      tipo_de_conflito == "impacto_prioridades" ~ "Prioridades",
+      tipo_de_conflito == "impacto_gerenciamento" ~ "Gerenciamento",
+      tipo_de_conflito == "impacto_tecnico" ~ "Questões técnicas",
+      tipo_de_conflito == "impacto_prazos" ~ "Prazos",
+      tipo_de_conflito == "impacto_personalidade" ~ "Personalidades",
+    )
+  ) %>%
+  count(tipo_de_conflito, impacto) %>%
+  mutate(n = n/size_d * 100) %>%
+  ggplot(aes(x = impacto, y = n)) +
+  geom_bar(stat = 'identity', position = 'dodge', color = 'black', fill = '#d7301f', alpha = .9) +
+  facet_wrap( ~ tipo_de_conflito) +
+  labs(x = "Impacto atribuído pelo aluno",
+       y = "Porcentagem de respostas (%)",
+       caption = "Onde 1 equivale a 'Menos impactante' e 5 equivale a 'Mais impactante'",
+       title = "")
+```
+
+```{r impacto-media-fator, fig.cap="Tipo de conflito pela média do impacto atribuído"}
+respostas_clean %>%
+  select(starts_with("impacto_")) %>%
+  summarise(across(.fns = c("mean" = mean, "var" = var), .names = "{.col}_{.fn}")) %>%
+  pivot_longer(
+    cols = starts_with("impacto_"),
+    names_to = "tipo_de_conflito",
+    values_to = "value"
+  ) %>% rowwise() %>%
+  mutate(
+    metric = str_split(tipo_de_conflito, "_")[[1]][3],
+    tipo_de_conflito = str_split(tipo_de_conflito, "_")[[1]][2],
+    tipo_de_conflito = case_when(
+      tipo_de_conflito == "prioridades" ~ "Prioridades",
+      tipo_de_conflito == "gerenciamento" ~ "Gerenciamento",
+      tipo_de_conflito == "tecnico" ~ "Questões técnicas",
+      tipo_de_conflito == "prazos" ~ "Prazos",
+      tipo_de_conflito == "personalidade" ~ "Personalidades",
+    )
+  ) %>% ungroup() %>%
+  pivot_wider(id_cols = tipo_de_conflito, values_from = "value", names_from = "metric") %>%
+  mutate(ic.low = mean + qt(0.025, df = size_d-1) * sqrt(var/size_d),
+         ic.high = mean + qt(0.975, df = size_d-1) * sqrt(var/size_d)) %>%
+  ggplot(aes(y = reorder(tipo_de_conflito, mean))) +
+  geom_linerange(aes(xmin = ic.low, xmax = ic.high)) +
+  geom_point(aes(x = mean), color = '#d7301f', size = 2) +
+  scale_x_continuous(limits = c(2, 4)) +
+  labs(title = "",
+       y = "Tipo de conflito",
+       x = "Média do impacto",
+       caption = "Onde 1 equivale a 'Menos impactante' e 5 equivale a 'Mais impactante'")
+```
+
+Na hipótese H2, *Personalidades* foi admitido como o tipo de conflito com maior impacto. Ele aparece com altos índices de respostas nos valores extremos e um extenso intervalo de confiança, que sobrepõe-se ao de *Questões técnicas*, *Prioridades* e *Prazos*. Entretanto, não há sobreposição com o intervalo de *Gerenciamento* que se extende por valores maiores, assim pode-se **refutar H2**, por haver um fator de maior impacto que ele.
 
 ## Soluções de conflitos
 
-- QP3: Quais as principais soluções aplicadas pelo time para o gerenciamento de conflitos?
-  - Novamente, frequência e média.
+Nesta última parte do estudo, o objetivo foi descrever a frequência de aplicação das principais técnicas de gerenciamento de conflitos presentes na literatura nos trabalhos em grupos dos alunos (QP3), assim como qual a efetividade destas na percepção do aluno (QP4).
 
-- QP4: Quais das soluções de gestão tiveram maior impacto positivo no desenvolvimento do projeto?
-  - Mais uma vez apresentar frequência e média.
+Os resultados apresentados nas Figuras \@ref(fig:solucao-freq) e \@ref(fig:solucao-media) evidenciam dois grupos que se distinguem pela sua frequência. O primeiro formado por *Confronto, Negociação e Apaziguamento* traz técnicas que são mais colaborativas e que apresentam altas frequências de aplicação, com médias próximas, superiores a 3, e sobreposição em seus intervalos de confiança. Enquanto, um segundo grupo reune soluções que possuem um caratér individualista e que são menos frequentemente aplicadas: *Evasão* e *Imposição*. Novamente com médias próximas e sobreposição de seus intervalos de confiança. Assim, **confirma-se a hipótese H3** de que soluções colaborativas são aplicadas com maior frequência.
+
+```{r solucao-freq, fig.cap="Frequência da aplicação das técnicas de solução de conflito"}
+respostas_clean %>%
+  select(starts_with("solucao_")) %>%
+  pivot_longer(
+    cols = starts_with("solucao_"),
+    names_to = "tipo_de_solucao",
+    values_to = "freq"
+  ) %>%
+  mutate(
+    tipo_de_solucao = case_when(
+      tipo_de_solucao == "solucao_confronto" ~ "Confronto",
+      tipo_de_solucao == "solucao_negociacao" ~ "Negociação",
+      tipo_de_solucao == "solucao_evasao" ~ "Evasão",
+      tipo_de_solucao == "solucao_apazig" ~ "Apaziguamento",
+      tipo_de_solucao == "solucao_imposicao" ~ "Imposição",
+    )
+  ) %>%
+  count(tipo_de_solucao, freq) %>%
+  mutate(n = n/size_d * 100) %>%
+  ggplot(aes(x = freq, y = n)) +
+  geom_bar(stat = 'identity', position = 'dodge', color = 'black', fill = '#fdd49e') +
+  facet_wrap( ~ tipo_de_solucao) +
+  labs(x = "Frequência atribuída pelo aluno",
+       y = "Porcentagem de respostas (%)",
+       caption = "Onde 1 equivale a 'Quase nunca' e 5 equivale a 'Frequentemente'",
+       title = "")
+```
+
+```{r solucao-media, fig.cap="Técnica de solução pela média da frequêcia atribuída"}
+respostas_clean %>%
+  select(starts_with("solucao_")) %>%
+  summarise(across(.fns = c("mean" = mean, "var" = var), .names = "{.col}_{.fn}")) %>%
+  pivot_longer(
+    cols = starts_with("solucao_"),
+    names_to = "tipo_de_solucao",
+    values_to = "value"
+  ) %>% rowwise() %>%
+  mutate(
+    metric = str_split(tipo_de_solucao, "_")[[1]][3],
+    tipo_de_solucao = str_split(tipo_de_solucao, "_")[[1]][2],
+    tipo_de_solucao = case_when(
+      tipo_de_solucao == "confronto" ~ "Confronto",
+      tipo_de_solucao == "negociacao" ~ "Negociação",
+      tipo_de_solucao == "evasao" ~ "Evasão",
+      tipo_de_solucao == "apazig" ~ "Apaziguamento",
+      tipo_de_solucao == "imposicao" ~ "Imposição",
+    )
+  ) %>% ungroup() %>%
+  pivot_wider(id_cols = tipo_de_solucao, values_from = "value", names_from = "metric") %>%
+  mutate(ic.low = mean + qt(0.025, df = size_d-1) * sqrt(var/size_d),
+         ic.high = mean + qt(0.975, df = size_d-1) * sqrt(var/size_d)) %>%
+  ggplot(aes(y = reorder(tipo_de_solucao, mean))) +
+  geom_linerange(aes(xmin = ic.low, xmax = ic.high)) +
+  geom_point(aes(x = mean), color = '#fc8d59', size = 2) +
+  scale_x_continuous(limits = c(1.5, 4.5)) +
+  labs(title = "",
+       y = "Técnica de solução",
+       x = "Média da frequência",
+       caption = "Onde 1 equivale a 'Quase nunca' e 5 equivale a 'Frequentemente'")
+```
+
+Com respeito a efetividade, as Figuras \@ref(fig:impacto-solf) e \@ref(fig:impacto-solm) evidenciam que as técnicas colaborativas, destacadas no parágrafo anterior, são não apenas as mais frequentes como também as de maior efetividade. Com destaque para *Negociação* que tem uma distribuição concentrada em valores 4 e 5, sem nenhum valor 1, e cuja média, acima de 4, se distancia das demais técnicas. *Confronto* e *Apaziguamento* aparecem em seguida, com médias similares e sobreposição de seus intervalos, ambas tem uma distribuição mais concentrada em 3 e 4. Enquanto, *Evasão* e *Imposição* mostram-se como as menos efetivas, com forte concentração em 1 e 2, e médias próximas a 2, havendo uma grande sobreposição nos seus intervalos. Isso **corrobora a hipótese H4**, pois soluções que ignoram o problema ou são autoritárias são menos efetivos em sua resolução.
+
+```{r impacto-solf, fig.cap="Efetividade das técnicas de solução de conflitos"}
+respostas_clean %>%
+  select(starts_with("efetividade_")) %>%
+  pivot_longer(
+    cols = starts_with("efetividade_"),
+    names_to = "tipo_de_solucao",
+    values_to = "efetividade"
+  ) %>%
+  mutate(
+    tipo_de_solucao = case_when(
+      tipo_de_solucao == "efetividade_confronto" ~ "Confronto",
+      tipo_de_solucao == "efetividade_negociacao" ~ "Negociação",
+      tipo_de_solucao == "efetividade_evasao" ~ "Evasão",
+      tipo_de_solucao == "efetividade_apazig" ~ "Apaziguamento",
+      tipo_de_solucao == "efetividade_imposicao" ~ "Imposição",
+    )
+  ) %>%
+  count(tipo_de_solucao, efetividade) %>%
+  mutate(n = n/size_d * 100) %>%
+  ggplot(aes(x = efetividade, y = n)) +
+  geom_bar(stat = 'identity', position = 'dodge', color = 'black', fill = '#d7301f', alpha = .9) +
+  facet_wrap( ~ tipo_de_solucao) +
+  labs(x = "Efetividade atribuída pelo aluno",
+       y = "Porcentagem de respostas (%)",
+       caption = "Onde 1 equivale a 'Menos efetivo' e 5 equivale a 'Mais efetivo'",
+       title = "")
+```
+
+```{r impacto-solm, fig.cap="Técnica de solução pela média do impacto atribuído"}
+respostas_clean %>%
+  select(starts_with("efetividade_")) %>%
+  summarise(across(.fns = c("mean" = mean, "var" = var), .names = "{.col}_{.fn}")) %>%
+  pivot_longer(
+    cols = starts_with("efetividade_"),
+    names_to = "tipo_de_solucao",
+    values_to = "value"
+  ) %>% rowwise() %>%
+  mutate(
+    metric = str_split(tipo_de_solucao, "_")[[1]][3],
+    tipo_de_solucao = str_split(tipo_de_solucao, "_")[[1]][2],
+    tipo_de_solucao = case_when(
+      tipo_de_solucao == "confronto" ~ "Confronto",
+      tipo_de_solucao == "negociacao" ~ "Negociação",
+      tipo_de_solucao == "evasao" ~ "Evasão",
+      tipo_de_solucao == "apazig" ~ "Apaziguamento",
+      tipo_de_solucao == "imposicao" ~ "Imposição",
+    )
+  ) %>% ungroup() %>%
+  pivot_wider(id_cols = tipo_de_solucao, values_from = "value", names_from = "metric") %>%
+  mutate(ic.low = mean + qt(0.025, df = size_d-1) * sqrt(var/size_d),
+         ic.high = mean + qt(0.975, df = size_d-1) * sqrt(var/size_d)) %>%
+  ggplot(aes(y = reorder(tipo_de_solucao, mean))) +
+  geom_linerange(aes(xmin = ic.low, xmax = ic.high)) +
+  geom_point(aes(x = mean), color = '#d7301f', size = 2) +
+  scale_x_continuous(limits = c(1.5, 4.5)) +
+  labs(title = "",
+       y = "Técnica de solução",
+       x = "Média do impacto",
+       caption = "Onde 1 equivale a 'Menos efetivo' e 5 equivale a 'Mais efetivo'")
+```
