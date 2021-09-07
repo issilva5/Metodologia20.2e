@@ -16,3 +16,23 @@
     - Quais soluções têm maior impacto na solução.
 - Qual a principal conclusão ou contribuição do estudo?
     - Ajuda no entendimento e a evitar possíveis conflitos futuros enfretados por novos membros de equipe.
+
+No curso de Ciência da Computação é comum a formação de grupos para desenvolvimento de software no contexto das disciplinas. O desenvolvimento de atividades em grupos formadas por diversas pessoas tem uma grande possibilidade de geração de conflitos, e muitas vezes parece inevitável, principalmente quando há grande diversidades de pensamentos entre os membros.
+
+Esse trabalho realizou-se a partir de um questionario realizados com alunos do curso de Ciência da Computação da Universidade Federal de Campina Grande. E o principal objetivo dessa pesquisa é responder quais os principais tipos de conflitos, as principais formas de soluções desses conflitos encontradas por alunos das disciplinas e as soluções com maior impacto para solução dos conflitos. Utilizamos como base os conflitos e soluções citados em @verma1998conflict para a realização desse estudo. As questões e hipóteses utilizadas baseiam-se nos tipos de conflitos e formas de gerenciamento de conflitos encontrados na literatura, como também na experiência pessoal dos membros desse estudo.
+
+As **questões de pesquisa** são:
+
+* Quais os tipos de conflito mais recorrentes nos times de desenvolvimento?
+* Qual fonte de conflitos teve maior impacto negativo no desenvolvimento do projeto?
+* Quais as principais soluções aplicadas pelo time para o gerenciamento de conflitos?
+* Quais das soluções de gestão tiveram maior impacto positivo no desenvolvimento do projeto?
+
+Enquanto que as **hipóteses** a serem testadas a partir do survey são:
+
+* Conflitos decorrentes de desacordo sobre as tarefas são os mais frequentes.
+* Conflitos decorrentes de relacionamentos entre os membros da equipe são os que têm maior impacto negativo no projeto.
+* Modos de gerenciamento que seguem abordagens colaborativas são mais empregado nos projetos. 
+* Modos de gerenciamento que ignoram ou propõem soluções autoritárias para os conflitos são menos efetivos em sua resolução.
+
+Ao fim desse artigo conseguimos responder as questões propostas e também testar com sucesso as hipóteses.
