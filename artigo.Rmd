@@ -4,19 +4,32 @@ bibliography: 'metadata/references.bib'
 csl: 'metadata/associacao-brasileira-de-normas-tecnicas.csl'
 fontsize: 11pt
 author:
-- "João Marcelo Fernandes da Silva Júnior^[joao.marcelo.junior@ccc.ufcg.edu.br]"
-- "Gabriela Roberta Alverga do Nascimento"
-- "Ítallo de Sousa Silva"
-- "Thiago Nascimento de Lima"
-# classoption:
-# - twocolumn
+  - "João Marcelo Fernandes da Silva Júnior^[joao.marcelo.junior@ccc.ufcg.edu.br]"
+  - "Gabriela Roberta Alverga do Nascimento"
+  - "Ítallo de Sousa Silva"
+  - "Thiago Nascimento de Lima"
+classoption:
+  - twocolumn
+header-includes:
+  - \usepackage{indentfirst}
+  - \usepackage{floatrow}
+  - \setlength\parindent{35pt}
+  - \floatsetup[figure]{capposition=top}
+  - \floatsetup[table]{capposition=top}
+fig_caption: yes
+indent: true
+lang: "pt-BR"
+link-citations: yes
 output: 
-  pdf_document:
+  bookdown::pdf_document2:
     df_print: kable
+    fig_caption: yes
+    number_sections: false
+    toc: false
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 options(scipen = 10, digits = 4, OutDec = ",")
 ```
 
