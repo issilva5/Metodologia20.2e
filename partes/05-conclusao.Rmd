@@ -1,18 +1,11 @@
 # Conclusões e trabalhos futuros
 
-- O que foi atingido?
-  - Análise de 4 hipóteses
-    - Conflitos decorrentes de desacordo sobre as tarefas são os mais frequentes.
-    - Conflitos decorrentes de relacionamentos entre os membros da equipe são os que têm maior impacto negativo no projeto.
-    - Modos de gerenciamento que seguem abordagens colaborativas são mais empregado nos projetos.
-    - Modos de gerenciamento que ignoram ou propõem soluções autoritárias para os conflitos são menos efetivos em sua resolução.
-  
-- Quais os impactos?
-  - Saber conflitos mais frequentes possibilita minimizar sua ocorrência.
-  - Saber conflitos mais impactantes possibilita minimizar seu impacto negativo.
-  - Saber quais técnicas tem mais impacto positivo possibilita melhor gestão de conflitos.
+Através do resultado obtido pelo estudo foi constatado que os conflitos mais frequentes em times de desenvolvimento decorrem do desacordo sobre decisões do projeto, ou seja, quais atividades e tarefas devem ser executadas e em que sequência. Entretanto, os conflitos que mais impactaram no sucesso do projeto provém das relações interpessoais do grupo. Com relação as tentativas de soluções aplicadas pelos times, os métodos mais aplicados foram os de abordagem colaborativa, tais como apaziguamento, confronto e negociação. Além disso, os modos de gerenciamento menos efetivos em solucionar o conflito são os que ignoram ou propõem soluções autoritárias para os conflitos, tais como evasão e imposição.
+ 
+A compreensão sobre conflitos e modos de gerenciamento tem influência na gestão de conflitos, podendo ser pensada por intermédio desses vieses, sendo assim, possibilita ao gerente do time aplicar de forma estratégica seu esforço a conflitos mais frequentes, além de promover reconhecimento dos conflitos com maior potencial de escalonar e causar prejuízos ao projeto. Por fim, funciona como instrumento de escolha guiada através de soluções previamente aplicadas e com comprovação efetiva.
 
-- Trabalhos futuros
-  - Caracterização ampla de possiveis conflitos.
-  - Caracterização consequência no projeto.
-  - Expandir a amostra na tentativa de diminuir erros.
+Possíveis trabalhos futuros podem realizar uma expansão do universo do discurso da pesquisa, dando enfoque em especial a três direcionamentos. A expansão da amostra, apesar de grande adesão de respondentes o ideal seria um acrésimo no intuito de minizar erros estatísticos e diminuir o impacto dos dados enviesados. 
+
+Além disso, realizar uma investigação mais ampla de conflitos, certamente existem inúmeras fontes de conflitos que foram negligenciadas pel artigo, mas que podem ser mais comuns e mais impactantes. 
+
+Ao fim, promover trabalhos que pontuem as consequências para não resolução dos conflitos citados, quais os males em potencial podem infligir o projeto. Podendo incluir análise de caso ocorra a aplicação de algum modo de gerenciamento, quais danos forma impedidos ou amenizados.
