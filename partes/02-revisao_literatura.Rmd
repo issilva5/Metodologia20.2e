@@ -2,7 +2,9 @@
 
 Na litetura, existem diversos estudos tratando a respeito dos tipos e fontes de conflitos encontrados em projetos, bem como das técnicas de gerenciamento empregadas.
 
-Em @verma1998conflict são relatadas as sete maiores fontes de conflitos identificadas em projetos, que são baseadas em uma pesquisa realizada em uma empresa privada por @thamhain1975conflict. Entretanto, considerando o contexto dos projetos universitários algumas adaptações precisaram ser feitas. Sendo assim, os tipos de conflito, considerados nesta pesquisa, foram:
+Em uma visão mais tradicional, conflito é visto como algo sempre ruim e que deve ser evitado em projetos. No entanto, em uma visão contemporânea, conflito é visto como algo natural e inevitável em qualquer organização e as suas consequências serão positivas ou negativas conforme o conflito é administrado.
+
+Em uma organização ou equipe de projeto existem diversos fatores que podem gerar um conflito, como por exemplo a falha na comunicação entre membros. No geral, os principais fatores são definidos em três categorias quais são conflitos administrativos, interpessoais e perspectiva. Em @thamhain1975conflict são relatadas as sete maiores fontes de conflitos identificadas em projetos baseadas em uma pesquisa realizada em uma empresa privada. Considerando o contexto dessa pesquisa, os tipos de conflito são portanto:
 
 * Conflitos sobre **prioridades do projeto**, ou seja, sobre quais atividades e tarefas devem ser executadas e em que sequência.
 * Conflitos sobre **gerenciamento**, ou seja, sobre a definição da hierarquia, das responsabilidades, do plano de execução, do procedimento de comunicação de atividades, etc.
@@ -10,7 +12,7 @@ Em @verma1998conflict são relatadas as sete maiores fontes de conflitos identif
 * Conflito sobre **prazos**, ou seja, sobre a duração e data de entrega de tarefas do projeto.
 * Conflitos sobre **personalidades**, ou seja, centrados nas diferenças interpessoais do grupo.
 
-O gerenciamento de conflitos é muito importante para o sucesso do projeto, em @verma1998conflict encontramos cinco métodos de gerenciamento de conflitos, que foram utilizados nesta pesquisa:
+Um conflito pode causar um impacto significativo no sucesso ou fracasso de um projeto, dessa forma é muito importante como os conflitos são gerenciados. Uma bom gerenciamento de conflito pode resolver o que seria uma catástrofe para o projeto, um conflito simples pode resultar em um projeto fracassado o que seria apenas um simples conflito. Entretanto, uma vez que existem diferentes situações de um conflito, é difícil desenvolver uma técnica geral para solucionar um conflito e a escolha de um técnica individual depende de alguns fatores como importância do conflito, pessoas envolvidas entre outros. Em @verma1998conflict são citadas algumas formas de solução de conflitos, que levando em consideração o contexto da atual pesquisa são:
 
 * **Confronto (Confrontation)**: reconhecendo que a discordância existe e considerando os requisitos, debater para escolher a solução que mais está de acordo.
 * **Negociação (Give and Take)**: reconhecendo que a discordância existe, produzir uma solução combinando partes das propostas dos membros envolvidos.
