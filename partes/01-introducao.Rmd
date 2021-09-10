@@ -35,3 +35,4 @@ Enquanto que as **hipóteses** a serem testadas a partir do survey são:
 * Modos de gerenciamento que seguem abordagens colaborativas são mais empregado nos projetos. 
 * Modos de gerenciamento que ignoram ou propõem soluções autoritárias para os conflitos são menos efetivos em sua resolução.
 
+Os resultdados obtidos concluem que desacordo sobre perspectivas de prazo são os mais frequentes em projetos de desenvolvimento, porém decisões de gerenciamento possuem maior impacto no sucesso do projeto. Os métodos de solução de conflitos mais aplicados pelos times são de abordagem colaborativa e os métodos menos efetivos são os com abordagem autoritária.
