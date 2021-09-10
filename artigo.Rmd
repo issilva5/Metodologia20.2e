@@ -1,18 +1,20 @@
 ---
-title: "Conflitos em times de desenvolvimento de software no contexto dos projetos das disciplinas"
+title: "Conflitos em times de desenvolvimento de software no contexto dos projetos de disciplinas de graduação"
+subtitle: "Um estudo no Bacharelado em Ciência da Computação da Universidade Federal de Campina Grande"
 bibliography: 'metadata/references.bib'
 csl: 'metadata/associacao-brasileira-de-normas-tecnicas.csl'
 fontsize: 11pt
 author:
-  - "João Marcelo Fernandes da Silva Júnior^[joao.marcelo.junior@ccc.ufcg.edu.br]"
+  - "Thiago Nascimento de Lima^[Autor correspondente. thiago.lima@ccc.ufcg.edu.br]"
   - "Gabriela Roberta Alverga do Nascimento"
   - "Ítallo de Sousa Silva"
-  - "Thiago Nascimento de Lima"
+  - "João Marcelo Fernandes da Silva Júnior"
 classoption:
   - twocolumn
 header-includes:
   - \usepackage{indentfirst}
   - \usepackage{floatrow}
+  - \usepackage{lipsum}
   - \setlength\parindent{35pt}
   - \floatsetup[figure]{capposition=top}
   - \floatsetup[table]{capposition=top}
@@ -31,6 +33,9 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 options(scipen = 10, digits = 4, OutDec = ",")
+```
+
+```{r child = 'partes/00-resumo.Rmd'}
 ```
 
 ```{r child = 'partes/01-introducao.Rmd'}
