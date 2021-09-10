@@ -53,4 +53,8 @@ options(scipen = 10, digits = 4, OutDec = ",")
 ```{r child = 'partes/05-conclusao.Rmd'}
 ```
 
+# Informações adicionais
+
+Os [dados coletados](https://github.com/issilva5/Metodologia20.2e/blob/main/data/respostas_raw.csv) por este estudo e a [análise aplicada](https://github.com/issilva5/Metodologia20.2e/blob/main/partes/04-analise_exploratoria.Rmd) sobre eles estão disponíveis no seguinte repositório do Github: https://github.com/issilva5/Metodologia20.2e.
+
 # Referências
