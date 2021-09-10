@@ -35,4 +35,3 @@ Enquanto que as **hipóteses** a serem testadas a partir do survey são:
 * Modos de gerenciamento que seguem abordagens colaborativas são mais empregado nos projetos. 
 * Modos de gerenciamento que ignoram ou propõem soluções autoritárias para os conflitos são menos efetivos em sua resolução.
 
-Ao fim desse artigo conseguimos responder as questões propostas e também testar com sucesso as hipóteses.

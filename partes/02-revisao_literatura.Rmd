@@ -2,7 +2,9 @@
 
 Na litetura, existem diversos estudos tratando a respeito dos tipos e fontes de conflitos encontrados em projetos, bem como das técnicas de gerenciamento empregadas.
 
-Em uma visão mais tradicional, conflito é visto como algo sempre ruim e que deve ser evitado em projetos. No entanto, em uma visão contemporânea, conflito é visto como algo natural e inevitável em qualquer organização e as suas consequências serão positivas ou negativas conforme o conflito é administrado.
+Em uma visão mais tradicional, conflito é visto como algo sempre ruim e que deve ser evitado em projetos. No entanto, em uma visão contemporânea, conflito é visto como algo natural e inevitável em qualquer organização e as suas consequências serão positivas ou negativas conforme o conflito é administrado @verma1998conflict.
+
+Pequenos conflitos em um time de desenvolvimento pode ser uma coisa boa, pois discussões saudáveis podem gerar níveis de tensão que incentivam a inovação da equipe @gobeli.
 
 Em uma organização ou equipe de projeto existem diversos fatores que podem gerar um conflito, como por exemplo a falha na comunicação entre membros. No geral, os principais fatores são definidos em três categorias quais são conflitos administrativos, interpessoais e perspectiva. Em @thamhain1975conflict são relatadas as sete maiores fontes de conflitos identificadas em projetos baseadas em uma pesquisa realizada em uma empresa privada. Considerando o contexto dessa pesquisa, os tipos de conflito são portanto:
 
