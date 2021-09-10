@@ -1,6 +1,6 @@
 # Resultados e discussão
 
-Nesta seção, dividida em três partes, os resultados, obtidos da aplicação do formulário, são apresentados. A primeira parte traz a descrição do perfil dos alunos respondentes, a segunda trata das percepções sobre as fontes de conflitos nos times, e por fim, a última aborda a temática das técnicas de resolução de conflitos. Além disso, as perguntas e hipóteses de pesquisa são retomadas e discutidas.
+Nesta seção, dividida em três partes, são apresentados os resultados obtidos da aplicação do formulário. A primeira parte traz a descrição do perfil dos alunos respondentes, a segunda trata das percepções sobre as fontes de conflitos nos times, e por fim, a última aborda a temática das técnicas de resolução de conflitos. Além disso, as perguntas e hipóteses de pesquisa são retomadas e discutidas.
 
 ```{r include=FALSE}
 library(tidyverse)
@@ -175,7 +175,7 @@ plot(p)
 nmembros <- respostas_clean %>% pull(n_max_membros)
 ```
 
-Além disso, foi coletado o tamanho do maior grupo do qual o aluno fez parte até o momento. A distribuição desta variável pode ser vista na Figura \@ref(fig:tam). A resposta com maior frequência foi 5, com média e mediana de `r round(mean(nmembros),2)` e `r round(median(nmembros),2)` membros respectivamente.
+Além disso, foi coletado o tamanho do maior grupo do qual o aluno fez parte até o momento. A distribuição desta variável pode ser vista na Figura \@ref(fig:tam). A resposta com maior frequência foi 5, com média de `r round(mean(nmembros),2)` e mediana de `r round(median(nmembros),2)` membros.
 
 ## Fontes e origens de conflito
 
@@ -248,7 +248,7 @@ respostas_clean %>%
        caption = "Onde 1 equivale a 'Quase nunca' e 5 equivale a 'Frequentemente'")
 ```
 
-Na Figura \@ref(fig:freq), está apresentada a distribuição das respostas obtidas a respeito da frequência com que determinado fator levou a conflitos no time. Considerando as modas das respostas, é possível ordenar os fatores, crescentemente, por sua frequência: Personalidades, Prioridades, Questões técnicas, Gerenciamento e Prazos. A Figura \@ref(fig:conf-freq-fator) apresenta os tipos de origens de conflito ordenados pela média das respostas, com um intervalo de confiança de 95%. O fator Prazos é, em média, o maior e também o único cujo intervalo de confiança não se sobrepõe aos demais. Essas observações **refutam a hipótese (H1)**, uma vez que *Prioridades* foi assumida como a causa mais frequente, mas foi observado que a razão mais frequente é, na verdade, *Prazos*.
+Na Figura \@ref(fig:freq), está apresentada a distribuição das respostas obtidas a respeito da frequência com que determinado fator levou a conflitos no time. Considerando as modas das respostas, é possível ordenar os fatores, crescentemente, por sua frequência: Personalidades, Prioridades, Questões técnicas, Gerenciamento e Prazos. A Figura \@ref(fig:conf-freq-fator) apresenta os tipos de origens de conflito ordenados pela média das respostas, com um intervalo de confiança de 95%. O fator Prazos é, em média, o maior e também o único cujo intervalo de confiança não se sobrepõe aos demais. Essas observações **refutam a hipótese H1**, uma vez que *Prioridades* foi assumida como a causa mais frequente, mas foi observado que a razão mais frequente é, na verdade, *Prazos*.
 
 Na Figura \@ref(fig:fator-conflito-dist), é apresentada a distribuição das respostas sobre o impacto de cada fator de conflito no grupo. *Gerenciamento* mostra-se com altas porcentagens de respostas nos valores 4 e 5, indicando um forte impacto no projeto. Isto é confirmado pela Figura \@ref(fig:impacto-media-fator), pois sua média é de fato a maior. Entretanto, seu intervalo de confiança sobrepõe-se ao do fator *Prazos*, que tem uma frequência de resposta quase uniforme entre 2 e 5.
 
