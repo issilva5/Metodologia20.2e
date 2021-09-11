@@ -241,6 +241,16 @@ respostas_clean %>%
   ggplot(aes(y = reorder(tipo_de_conflito, mean))) +
   geom_linerange(aes(xmin = ic.low, xmax = ic.high)) +
   geom_point(aes(x = mean), color = '#fc8d59', size = 2) +
+  geom_text(
+    aes(
+      x = ic.high,
+      label = str_glue("[{round(ic.low, 3)}; {round(ic.high,3)}]")
+    ),
+    size = 2.5,
+    nudge_y = -.1,
+    nudge_x = -.12,
+    show.legend = F
+  ) +
   scale_x_continuous(limits = c(2, 4)) +
   labs(title = "",
        y = "Tipo de conflito",
@@ -306,6 +316,16 @@ respostas_clean %>%
   ggplot(aes(y = reorder(tipo_de_conflito, mean))) +
   geom_linerange(aes(xmin = ic.low, xmax = ic.high)) +
   geom_point(aes(x = mean), color = '#d7301f', size = 2) +
+  geom_text(
+    aes(
+      x = ic.high,
+      label = str_glue("[{round(ic.low, 3)}; {round(ic.high,3)}]")
+    ),
+    size = 2.5,
+    nudge_y = -.1,
+    nudge_x = -.12,
+    show.legend = F
+  ) +
   scale_x_continuous(limits = c(2, 4)) +
   labs(title = "",
        y = "Tipo de conflito",
@@ -375,6 +395,16 @@ respostas_clean %>%
   ggplot(aes(y = reorder(tipo_de_solucao, mean))) +
   geom_linerange(aes(xmin = ic.low, xmax = ic.high)) +
   geom_point(aes(x = mean), color = '#fc8d59', size = 2) +
+  geom_text(
+    aes(
+      x = ic.high,
+      label = str_glue("[{round(ic.low, 3)}; {round(ic.high,3)}]")
+    ),
+    size = 2.5,
+    nudge_y = -.1,
+    nudge_x = -.12,
+    show.legend = F
+  ) +
   scale_x_continuous(limits = c(1.5, 4.5)) +
   labs(title = "",
        y = "Técnica de solução",
@@ -438,6 +468,16 @@ respostas_clean %>%
   ggplot(aes(y = reorder(tipo_de_solucao, mean))) +
   geom_linerange(aes(xmin = ic.low, xmax = ic.high)) +
   geom_point(aes(x = mean), color = '#d7301f', size = 2) +
+  geom_text(
+    aes(
+      x = ic.high,
+      label = str_glue("[{round(ic.low, 3)}; {round(ic.high,3)}]")
+    ),
+    size = 2.5,
+    nudge_y = -.1,
+    nudge_x = -.12,
+    show.legend = F
+  ) +
   scale_x_continuous(limits = c(1.5, 4.5)) +
   labs(title = "",
        y = "Técnica de solução",
