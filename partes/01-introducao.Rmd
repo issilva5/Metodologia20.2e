@@ -20,4 +20,4 @@ Enquanto que as **hipóteses** testadas a partir do survey foram:
 - H3: Modos de gerenciamento que seguem abordagens colaborativas são mais empregado nos projetos. 
 - H4: Modos de gerenciamento que ignoram ou propõem soluções autoritárias para os conflitos são menos efetivos em sua resolução.
 
-Os resultados mostraram que o desacordo sobre perspectivas de prazo foi identificado como fonte de conflito mais frequente em projetos de desenvolvimento, entretanto decisões de gerenciamento possuem maior impacto no sucesso do projeto. Dentre os métodos de solução de conflitos aplicados pelos times, os de abordagem colaborativa são os mais frequentes, ao passo que os métodos com abordagem autoritária são os menos efetivos.
+Os resultados mostraram que o desacordo sobre perspectivas de prazo foi identificado como fonte de conflito mais frequente em projetos de desenvolvimento, entretanto decisões de gerenciamento possuem maior impacto no sucesso do projeto. Dentre os métodos de solução de conflitos aplicados pelos times, os de abordagem colaborativa são os mais frequentes, ao passo que as abordagens autoritárias ou ignoram o problema são os menos efetivas.
