@@ -4,11 +4,11 @@ subtitle: "Um estudo no Bacharelado em Ciência da Computação da Universidade 
 bibliography: 'metadata/references.bib'
 csl: 'metadata/associacao-brasileira-de-normas-tecnicas.csl'
 fontsize: 11pt
-author:
-  - "Thiago Nascimento de Lima^[Autor correspondente. thiago.lima@ccc.ufcg.edu.br]"
-  - "Gabriela Roberta Alverga do Nascimento"
-  - "Ítallo de Sousa Silva"
-  - "João Marcelo Fernandes da Silva Júnior"
+#author:
+#  - "Thiago Nascimento de Lima^[Autor correspondente. thiago.lima@ccc.ufcg.edu.br]"
+#  - "Gabriela Roberta Alverga do Nascimento"
+#  - "Ítallo de Sousa Silva"
+#  - "João Marcelo Fernandes da Silva Júnior"
 classoption:
   - twocolumn
 header-includes:
