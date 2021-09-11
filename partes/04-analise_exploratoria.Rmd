@@ -122,7 +122,7 @@ respostas_clean <-
 
 ## Perfil dos alunos respondentes
 
-O Bacharelado em Ciência da Computação da Universidade Federal de Campina Grande (UFCG) tem duração estimada de nove semestres e oferta anualmente cerca de 180 novas vagas. No momento da aplicação desta pesquisa, o curso contava com um total de 876 alunos matriculados. Esta pesquisa reuniu 81 respostas, destas 78 foram válidas, correspondendo a aproximadamente 9% dos alunos do curso. O descarte das respostas decorreu devido o respondente não ter participado de nenhum projeto em grupo. O perfil dos alunos foi avaliado considerando três aspectos: período de ingresso no curso, disciplinas cursadas e participação em projetos de disciplinas.
+O Bacharelado em Ciência da Computação da Universidade Federal de Campina Grande (UFCG) tem duração estimada de nove semestres e oferta anualmente cerca de 180 novas vagas. No momento da aplicação desta pesquisa, o curso contava com um total de 876 alunos matriculados. Esta pesquisa reuniu 81 respostas, destas 78 foram válidas, correspondendo a aproximadamente 9% dos alunos do curso. O descarte das respostas decorreu conforme detalhado na seção de [metodologia](#Materiais e Métodos). O perfil dos alunos foi avaliado considerando três aspectos: período de ingresso no curso, disciplinas cursadas e participação em projetos de disciplinas.
 
 A Tabela \@ref(tab:periodos) apresenta a distribuição dos respondentes pelo período de ingresso no curso. Houve uma predominânica de respostas de alunos que estão na segunda metade do curso (ou seja, cursaram mais de cinco períodos até o momento da pesquisa), com destaque para o período 2018.1 que concentra mais de 25% das respostas.
 

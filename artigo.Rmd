@@ -1,18 +1,20 @@
 ---
-title: "Conflitos em times de desenvolvimento de software no contexto dos projetos das disciplinas"
+title: "Conflitos em times de desenvolvimento de software no contexto dos projetos de disciplinas de graduação"
+subtitle: "Um estudo no Bacharelado em Ciência da Computação da Universidade Federal de Campina Grande"
 bibliography: 'metadata/references.bib'
 csl: 'metadata/associacao-brasileira-de-normas-tecnicas.csl'
 fontsize: 11pt
-author:
-  - "João Marcelo Fernandes da Silva Júnior^[joao.marcelo.junior@ccc.ufcg.edu.br]"
-  - "Gabriela Roberta Alverga do Nascimento"
-  - "Ítallo de Sousa Silva"
-  - "Thiago Nascimento de Lima"
+#author:
+#  - "Thiago Nascimento de Lima^[Autor correspondente. thiago.lima@ccc.ufcg.edu.br]"
+#  - "Gabriela Roberta Alverga do Nascimento"
+#  - "Ítallo de Sousa Silva"
+#  - "João Marcelo Fernandes da Silva Júnior"
 classoption:
   - twocolumn
 header-includes:
   - \usepackage{indentfirst}
   - \usepackage{floatrow}
+  - \usepackage{lipsum}
   - \setlength\parindent{35pt}
   - \floatsetup[figure]{capposition=top}
   - \floatsetup[table]{capposition=top}
@@ -33,6 +35,9 @@ knitr::opts_chunk$set(echo = FALSE)
 options(scipen = 10, digits = 4, OutDec = ",")
 ```
 
+```{r child = 'partes/00-resumo.Rmd'}
+```
+
 ```{r child = 'partes/01-introducao.Rmd'}
 ```
 
@@ -47,5 +52,9 @@ options(scipen = 10, digits = 4, OutDec = ",")
 
 ```{r child = 'partes/05-conclusao.Rmd'}
 ```
+
+# Informações adicionais
+
+Os [dados coletados](https://github.com/issilva5/Metodologia20.2e/blob/main/data/respostas_raw.csv) por este estudo e a [análise aplicada](https://github.com/issilva5/Metodologia20.2e/blob/main/partes/04-analise_exploratoria.Rmd) sobre eles estão disponíveis no seguinte repositório do Github: https://github.com/issilva5/Metodologia20.2e.
 
 # Referências

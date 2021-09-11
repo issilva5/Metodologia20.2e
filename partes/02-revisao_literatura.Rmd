@@ -1,23 +1,19 @@
 # Trabalhos relacionados
 
-Na litetura, existem diversos estudos tratando a respeito dos tipos e fontes de conflitos encontrados em projetos, bem como das técnicas de gerenciamento empregadas.
+Na litetura, diversos estudos dizem respeito aos tipos e fontes de conflitos encontrados em projetos, bem como às técnicas de gerenciamento empregadas. Em uma visão mais conservadora, conflitos são sempre vistos como algo ruim e que devem ser evitado em projetos. No entanto, em uma visão contemporânea, conflitos são vistos como algo natural e inevitável em qualquer organização, podendo suas consequências serem positivas ou negativas, a depender da maneira conforme o problema é administrado [@verma1998conflict]. @gobeli relatam, ainda, que pequenos conflitos em um time de desenvolvimento podem ser positivos, pois discussões saudáveis podem gerar níveis de tensão que incentivam a inovação da equipe.
 
-Em uma visão mais tradicional, conflito é visto como algo sempre ruim e que deve ser evitado em projetos. No entanto, em uma visão contemporânea, conflito é visto como algo natural e inevitável em qualquer organização e as suas consequências serão positivas ou negativas conforme o conflito é administrado @verma1998conflict.
+Em uma organização ou equipe de projeto existem diversos fatores que podem gerar um conflito, por exemplo uma falha na comunicação entre membros. No geral, os principais fatores podem ser divididos em três categorias: administrativos, interpessoais e de perspectiva. Em @thamhain1975conflict são relatadas as sete maiores fontes de conflitos identificadas em projetos, baseadas em uma pesquisa realizada em uma empresa privada. Considerando o contexto dessa pesquisa, cinco destes foram escolhidos para serem avaliados, foram eles:
 
-Pequenos conflitos em um time de desenvolvimento pode ser uma coisa boa, pois discussões saudáveis podem gerar níveis de tensão que incentivam a inovação da equipe @gobeli.
+- Conflitos sobre **prioridades do projeto**, ou seja, sobre quais atividades e tarefas devem ser executadas e em que sequência.
+- Conflitos sobre **gerenciamento**, ou seja, sobre a definição da hierarquia, das responsabilidades, do plano de execução, do procedimento de comunicação de atividades, etc.
+- Conflitos sobre **questões técnicas**, ou seja, sobre quais tecnologias, algoritmos e otimizações utilizar.
+- Conflito sobre **prazos**, ou seja, sobre a duração e data de entrega de tarefas do projeto.
+- Conflitos sobre **personalidades**, ou seja, centrados nas diferenças interpessoais do grupo.
 
-Em uma organização ou equipe de projeto existem diversos fatores que podem gerar um conflito, como por exemplo a falha na comunicação entre membros. No geral, os principais fatores são definidos em três categorias quais são conflitos administrativos, interpessoais e perspectiva. Em @thamhain1975conflict são relatadas as sete maiores fontes de conflitos identificadas em projetos baseadas em uma pesquisa realizada em uma empresa privada. Considerando o contexto dessa pesquisa, os tipos de conflito são portanto:
+Conflitos podem ter impacto significativo no sucesso, ou fracasso, de um projeto, portanto uma gestão efetiva deles se faz muito importante. Com uma gestão eficiente, conflitos que poderiam levar a uma catástrofe no projeto podem ser evitados. Enquanto que uma gestão inapropriada pode fazer com que um conflito simples resulte no fracasso do projeto. Dada a diversidade dos conflitos, é impossível desenvolver uma técnica geral para solucionar qualquer conflito, assim a escolha da abordagem de gerenciamento precisa observar fatores como a importância do conflito e as pessoas envolvidas. Para este estudo os seguintes procedimentos de solução de conflitos foram considerados [@verma1998conflict]:
 
-* Conflitos sobre **prioridades do projeto**, ou seja, sobre quais atividades e tarefas devem ser executadas e em que sequência.
-* Conflitos sobre **gerenciamento**, ou seja, sobre a definição da hierarquia, das responsabilidades, do plano de execução, do procedimento de comunicação de atividades, etc.
-* Conflitos sobre **questões técnicas**, ou seja, sobre quais tecnologias, algoritmos e otimizações utilizar.
-* Conflito sobre **prazos**, ou seja, sobre a duração e data de entrega de tarefas do projeto.
-* Conflitos sobre **personalidades**, ou seja, centrados nas diferenças interpessoais do grupo.
-
-Um conflito pode causar um impacto significativo no sucesso ou fracasso de um projeto, dessa forma é muito importante como os conflitos são gerenciados. Uma bom gerenciamento de conflito pode resolver o que seria uma catástrofe para o projeto, um conflito simples pode resultar em um projeto fracassado o que seria apenas um simples conflito. Entretanto, uma vez que existem diferentes situações de um conflito, é difícil desenvolver uma técnica geral para solucionar um conflito e a escolha de um técnica individual depende de alguns fatores como importância do conflito, pessoas envolvidas entre outros. Em @verma1998conflict são citadas algumas formas de solução de conflitos, que levando em consideração o contexto da atual pesquisa são:
-
-* **Confronto (Confrontation)**: reconhecendo que a discordância existe e considerando os requisitos, debater para escolher a solução que mais está de acordo.
-* **Negociação (Give and Take)**: reconhecendo que a discordância existe, produzir uma solução combinando partes das propostas dos membros envolvidos.
-* **Evasão (Withdrawal)**: ignorar o problema ou reconhecer que ele existe, mas considerar que não vale o esforço da resolução.
-* **Apaziguamento (Smoothing)**: reconhecendo que a discordância existe, escolher a solução daqueles mais envolvidos com a tarefa.
-* **Imposição (Forcing)**: reconhecendo que a discordância existe, um membro de maior hierarquia (ex. gerente) impõe a solução.
+- **Confronto (Confrontation)**: reconhecendo que a discordância existe e considerando os requisitos, debater para escolher a solução que mais está de acordo.
+- **Negociação (Give and Take)**: reconhecendo que a discordância existe, produzir uma solução combinando partes das propostas dos membros envolvidos.
+- **Apaziguamento (Smoothing)**: reconhecendo que a discordância existe, escolher a solução daqueles mais envolvidos com a tarefa.
+- **Evasão (Withdrawal)**: ignorar o problema ou reconhecer que ele existe, mas considerar que não vale o esforço da resolução.
+- **Imposição (Forcing)**: reconhecendo que a discordância existe, um membro de maior hierarquia (ex. gerente) impõe a solução.
